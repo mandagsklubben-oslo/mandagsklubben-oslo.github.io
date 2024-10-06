@@ -1,0 +1,141 @@
+/*	Typography presets
+ * ------------------------------------	*/
+.gigantic, .huge, .large, .bigger, .big,
+h1, h2, h3, h4, h5, h6 {
+  color: #f2ede1;
+}
+
+.gigantic {
+  font-size: 32px;
+  line-height: 1.09;
+  letter-spacing: -2px;
+}
+
+.huge, h1 {
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.large, h2 {
+  font-size: 34px;
+  line-height: 1.14;
+}
+
+.bigger, h3 {
+  font-size: 28px;
+  line-height: 1.38;
+  margin: 24px 0px;
+}
+
+.big, h4 {
+  font-size: 22px;
+  line-height: 1.38;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 1.38;
+}
+
+p {
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+.small, small {
+  font-size: 12px;
+  line-height: 1;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+  color: #46c0a0;
+}
+
+/* Links
+ * ------------------------------------	*/
+a {
+  color: #f2ede1;
+  text-decoration: none;
+  outline: 0;
+}
+
+a:hover, a:focus {
+  color: #46c0a0;
+}
+
+/* Selection colors
+ * ------------------------------------	*/
+::selection {
+  background: #b8e7db;
+}
+
+::-moz-selection {
+  background: #b8e7db;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+body {
+  -webkit-tap-highlight-color: #b8e7db;
+}
+
+/* Basic Styles
+ * ------------------------------------	*/
+body {
+  background: #1a1c23;
+  font-family: "Sixtyfour", sans-serif;
+  color: #f2ede1;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+body .site-container {
+  width: 65vw;
+  margin: auto;
+}
+
+body .site-container {
+  width: 80vw;
+}
+
+/* header */ 
+header {
+  position: sticky;
+  top: 0;
+  background: #1a1c23;
+}
+header .site-title {
+  text-align: center;
+  overflow-wrap: break-word;
+}
+header .site-info {
+  text-align: justify;
+}
+
+/* home */
+.program-list {
+  text-align: justify;
+}
+
+/* footer */ 
+footer .social-media {
+  text-align: center;
+}
+footer .social-media a {
+  margin: 10px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=styles.css.map */

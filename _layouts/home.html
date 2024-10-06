@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<section>
+    {% for date in site.programs %}
+    <h4 class="program-date">{{ date.header }}</h4>
+    <div class="program-list">
+        {{ date.content }}
+    </div>
+    {% endfor%}
+</section>
