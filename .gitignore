@@ -1,0 +1,15 @@
+# OSX
+.DS_Store
+
+# Thumbnails
+._*
+
+# Jekyll
+_site
+.jekyll-cache
+
+# Sass
+.sass-cache
+
+# Gemfile
+Gemfile.lock
