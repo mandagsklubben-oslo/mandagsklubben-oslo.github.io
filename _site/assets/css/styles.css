@@ -1,14 +1,7 @@
-/*	Typography presets
- * ------------------------------------	*/
+/*	Typography presets ------------------------------------	*/
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
   color: #f2ede1;
-}
-
-.gigantic {
-  font-size: 32px;
-  line-height: 1.09;
-  letter-spacing: -2px;
 }
 
 .huge, h1 {
@@ -31,10 +24,13 @@ h1, h2, h3, h4, h5, h6 {
 .big, h4 {
   font-size: 22px;
   line-height: 1.38;
+  background: #145588;
+  border-radius: 8px;
+  text-align: center;
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.38;
 }
 
@@ -42,6 +38,7 @@ p {
   font-size: 14.5px;
   font-weight: 100;
   line-height: 1.5;
+  /*word-spacing: -0.5ch*/
 }
 
 .small, small {
@@ -51,15 +48,15 @@ p {
 
 em {
   font-style: italic;
+  color: #46c0a0;
 }
 
 strong {
   font-weight: bold;
-  color: #46c0a0;
+  color: #631a37;
 }
 
-/* Links
- * ------------------------------------	*/
+/* Links ------------------------------------ */
 a {
   color: #f2ede1;
   text-decoration: none;
@@ -70,8 +67,7 @@ a:hover, a:focus {
   color: #46c0a0;
 }
 
-/* Selection colors
- * ------------------------------------	*/
+/* Selection colors ------------------------------------ */
 ::selection {
   background: #cf477d;
 }
@@ -92,8 +88,7 @@ body {
   -webkit-tap-highlight-color: #cf477d;
 }
 
-/* Basic Styles
- * ------------------------------------	*/
+/* Basic Styles ------------------------------------ */
 body {
   background: #1a1c23;
   font-family: "Sixtyfour", sans-serif;
@@ -107,9 +102,15 @@ body {
   margin: auto;
 }
 
+br {
+  display: block;
+  content: "";
+  margin: 12px 0;
+}
+
 @media screen and (max-width: 480px) {
   .site-container {
-    width: 80vw;
+    width: 86vw;
   }
 }
 /* header */ 
@@ -127,12 +128,35 @@ header {
   text-align: justify;
 }
 
+.program {
+  padding: 8px;
+  border-style: dashed;
+  border-width: 1px;
+}
+
+.program-date {
+  text-align: center;
+}
+
 .program-list {
+  word-wrap: break-word;
   text-align: justify;
 }
 
+@media screen and (max-width: 480px) {
+  .site-info {
+    text-align: center;
+  }
+  .program-list {
+    text-align: center;
+  }
+}
 /* footer */ 
+footer {
+  margin: 8px 0;
+}
 footer .social-media {
+  margin: 8px 0;
   text-align: center;
 }
 footer .social-media a {

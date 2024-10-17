@@ -5,8 +5,8 @@
 # Footer
 
 social:
-- {icon: 'instagram', link: ''}
-- {icon: 'youtube',   likk: ''}
+- {icon: 'instagram', link: 'https://www.instagram.com/becco_oslo/'}
+- {icon: 'facebook', link: 'https://www.facebook.com/oslobecco'}
 
 #------------------------
 seo:
