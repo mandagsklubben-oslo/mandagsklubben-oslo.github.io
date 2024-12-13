@@ -1,32 +1,79 @@
 /* header */ 
-header
+.site-title
   position: sticky
   top: 0
   background: $backgroundColor
   text-align: center
   overflow-wrap: break-word
-  padding: 0.67em 0 0 0
-      
-/* home */
+  h1
+    margin: 0px 0px
+    padding: 0.5em 0em
+  .site-link
+    display: inline-block
+    margin: 0px 8px
+
+/* about */
 .site-info
   text-align: justify
+  .info-anchor
+    padding: 8px
+    margin: 8px 0px
+    border-radius: 8px
+    background: lighten($backgroundColor, 5%)
+    scroll-margin-top: 25vh
+    h4
+      text-align: center
+      margin: 8px 0px
+      color: $accentColor
+
+/* home */
+.subtitle
+  text-align: center
+  border-style: solid none
+  margin: 8px 0px
+
 .program
   padding: 8px
-  border-style: dashed
-  border-width: 1px
+  border-radius: 8px
+  &> summary
+    cursor: pointer
+  &:hover
+    background: lighten($backgroundColor, 5%)
 .program-date
   text-align: center
-
+  list-style: none
+  &:hover
+    color: $accentColor
 .program-list
-  
   word-wrap: break-word
   text-align: justify
+
+/* program */
+.band
+  .band-info
+    display: grid
+    grid-template-columns: 25% auto
+  .band-name
+    background: $primaryColor
+    border-radius: 8px
+    text-align: center
+    margin: 0px 0px 8px 0px
+  .band-members
+    padding: 8px
+    text-align: center
+    align-content: center
+    color: $textColor
+  .band-text
+    align-content: center
   
 @media screen and (max-width: 480px)
   .site-info
     text-align: center
   .program-list
     text-align: center
+  .band
+    .band-info
+      grid-template-columns: auto
   
 /* footer */ 
 footer
@@ -38,4 +85,4 @@ footer
       margin: 10px
       font:
         size: 40px 
-        weight: 700
+        weight: 700 
