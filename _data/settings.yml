@@ -1,6 +1,13 @@
 #------------------------
 # Header / Menu, evenutally
 
+menu:
+- {text: 'KONSEPTET', anchor: 'concept'}
+- {text: 'BOOKING', anchor: 'booking'}
+- {text: 'ØKONOMI', anchor: 'money'}
+- {text: 'UTSTYR', anchor: 'gear'}
+- {text: 'BIDRA', anchor: 'contribute'}
+
 #------------------------
 # Footer
 

@@ -1,4 +1,11 @@
 <header class="site-title">
-    <h1>MANDAGS<wbr>KLUBBEN OSLO</h1>
+    <h1><a href="{{site.github.url}}/">MANDAGS<wbr>KLUBBEN OSLO</a></h1>
+    <nav>
+        {% for item in site.data.settings.menu %}
+        <div class="site-link big">
+            <a href="{{site.github.url}}/about#{{item.anchor}}">{{item.text}}</a>
+        </div>
+        {% endfor %}
+    </nav>
     <hr>
 </header>

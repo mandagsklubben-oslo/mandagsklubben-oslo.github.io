@@ -3,22 +3,38 @@ layout: default
 ---
 <section>
     <div class="site-info">
-        <p>
-            Opplev Oslos nye musikalske hotspot! Mandagsklubben på Becco byr på spennende, eksperimentell musikk fra lokale musikere. Dette er musikernes helt egen klubb, drevet av idealisme og utforskningstrang. Her kan du hver gang høre fire unike live-sett i en uformell og intim setting. 
-        </p>
-        <p style="text-align: center">
-            <br>
-            Bli med på å gjøre mandagene til noe å glede seg til!
-            <br>
-            booking: torbensnekkestad<wbr>(at)gmail.com
-        </p>
+        <p> Mandagsklubben er en visjon om en oase for oss musikere – en scene hvor ny, eksperimentell musikk får blomstre. En scene for oss musikere til å presentere original, banebrytende kvalitetsmusikk, initiert av et savn om et sted i Oslo hvor man på relativt kort varsel kan spille, prøve ut nye ideer og konstellasjoner, og sammen skape et støttende og inspirerende musikkmiljø. I tredje etasje på Becco har vi nå muligheten for vårt eget sted hvor vi kan presentere det som er viktig for oss, i en konsentrert setting med lave skuldre.</p>
     </div>
+    <h3 class="subtitle">KOMMENDE MANDAGER</h3>
     {% for date in site.programs %}
-    <div class="program">
-        <h3 class="program-date">{{ date.header }}</h3>
+    {% assign mondayYear = date.header | date: "%y" %}
+    {% assign mondayMonth = date.header | date: "%m" %}
+    {% assign thisYear = "today" | date: "%y" %}
+    {% assign thisMonth = "today" | date: "%m" %}
+    {% if mondayYear > thisYear or mondayYear == thisYear and mondayMonth >= thisMonth %} <!-- boolean pairs from R -> L -->
+    <details name="monday" class="program">
+        <summary class="program-date bigger">{{ date.header }}</summary>
         <div class="program-list">
             {{ date.content }}
         </div>
-    </div> 
-    {% endfor%}
+    </details>
+    {% endif %}
+    {% endfor %}
+
+    <h3 class="subtitle">TIDLIGERE MANDAGER</h3>
+    {% for date in site.programs %}
+    {% assign mondayYear = date.header | date: "%y" %}
+    {% assign mondayMonth = date.header | date: "%m" %}
+    {% assign thisYear = "today" | date: "%y" %}
+    {% assign thisMonth = "today" | date: "%m" %}
+    {% if mondayYear < thisYear or mondayYear == thisYear and mondayMonth < thisMonth %} <!-- boolean pairs from R -> L -->
+    <details name="monday" class="program">
+        <summary class="program-date bigger">{{ date.header }}</summary>
+        <div class="program-list">
+            {{ date.content }}
+        </div>
+    </details>
+    {% endif %}
+    {% endfor %}
+
 </section>
